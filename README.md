@@ -21,10 +21,10 @@
 2. 关于android版本
     - 手机系统的安卓版本与GKI内核的安卓版本无关，应当对照手机内核版本的 **android**
     - 假设手机设置的内核版本为 5.10.66-**android12**-9-00001-g41ff3fa8fop9-ab8161528
-    - 那么你需要刷入[在此](https://github.com/zzh20188/GKI_KernelSU_SUSFS/releases)下载的 **android12**-5.10.66-2022-01-AnyKernel3.zip 文件
+    - 那么你需要刷入[在此](https://github.com/PVQ520/GKI_KernelSU_SUSFS/releases)下载的 **android12**-5.10.66-2022-01-AnyKernel3.zip 文件
 
 ### 下载
-可以[在此](https://github.com/zzh20188/GKI_KernelSU_SUSFS/releases)下载您的资源
+可以[在此](https://github.com/PVQ520/GKI_KernelSU_SUSFS/releases)下载您的资源
 1. 关于Anykernel3.zip，下载即用！
    - 然后使用刷入软件，例如[HorizonKernelFlasher](https://github.com/libxzr/HorizonKernelFlasher/releases)进行刷写内核
 2. 关于boot.img，下载与你内核格式相匹配的（无压缩、gz、lz4），[参考](https://kernelsu.org/zh_CN/guide/installation.html#install-by-kernelsu-boot-image) **找到合适的 boot.img** 一节
@@ -54,11 +54,11 @@
 > ##### SUKISU内置SUSFS功能相对模块，缺失try mount/umount数量显示功能，以及自定义界面的一些选项
 #### 在编译完成后，你会看到类似 `SukiSU-Manager(13235)` 和 `susfs-release-1.5.2+_537cdba` 的压缩包，简单来说这就是与内核一同上传的***最新管理器与susfs模块***。
 
-![例子](./assets/action.png)
+![例子](./assets/get_manager.gif)
 
-#### 同样的，在[Release](https://github.com/zzh20188/GKI_KernelSU_SUSFS/releases)的底部也同样包含它们
+#### 同样的，在[Release](https://github.com/PVQ520/GKI_KernelSU_SUSFS/releases)的底部也同样包含它们
 
-![release](./assets/release.png)
+![release](./assets/release_manager.gif)
 
 
 ### 内核构建时间
