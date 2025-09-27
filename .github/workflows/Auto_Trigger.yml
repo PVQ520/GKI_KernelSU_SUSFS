@@ -84,7 +84,7 @@ jobs:
           git push origin sha
           
       - name: Trigger test_release.yml workflow
-        if: steps.compare.outputs.new_commit == 'true'
+        if: steps.compare.outputs.new_commit == 'false'
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
