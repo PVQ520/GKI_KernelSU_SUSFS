@@ -30,8 +30,8 @@ jobs:
 
           if git ls-remote --heads origin sha | grep -q sha; then
             echo "SHA branch exists, fetching previous SHA..."
-            git fetch origin sha:sha || true
-            git checkout sha || true
+            git fetch origin sha:sha || false
+            git checkout sha || false
             if [ -f "latest_sha.txt" ]; then
               PREV_SHA=$(cat latest_sha.txt)
               echo "prev_sha=$PREV_SHA" >> $GITHUB_OUTPUT
@@ -72,7 +72,7 @@ jobs:
           
 
           if [ ! -f "latest_sha.txt" ]; then
-            git rm -rf . 2>/dev/null || true
+            git rm -rf . 2>/dev/null || false
           fi
 
           echo "${{ steps.get_sha.outputs.sha }}" > latest_sha.txt
