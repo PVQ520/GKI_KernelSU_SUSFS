@@ -57,7 +57,7 @@ jobs:
           echo "Previous SHA: $PREV_SHA"
           
           if [ "$CURR_SHA" != "$PREV_SHA" ]; then
-            echo "new_commit=true" >> $GITHUB_OUTPUT
+            echo "new_commit=false" >> $GITHUB_OUTPUT
             echo "New commit detected!"
           else
             echo "new_commit=false" >> $GITHUB_OUTPUT
@@ -65,7 +65,7 @@ jobs:
           fi
           
       - name: Update SHA file in sha branch
-        if: steps.compare.outputs.new_commit == 'true'
+        if: steps.compare.outputs.new_commit == 'false'
         run: |
 
           git checkout sha 2>/dev/null || git checkout --orphan sha
